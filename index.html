@@ -21,18 +21,38 @@
     <!-- MIO CSS -->
     <link rel="stylesheet" href="style.css" />
     <title>Bootstrap Grid</title>
+    <!-- MIO JAVASCRIPT -->
+    <script defer src="main.js"></script>
   </head>
   <body>
-    <input id="km-input" />
-    <input id="age-input" />
-    <button id="button-input">Genera</button>
-
+    <form id="form-input" class="row g-3 container-fluid">
+      <div class="col-4">
+        <label for="name-input" class="form-label">Nome e Cognome</label>
+        <input type="text" class="form-control" id="name-input" />
+      </div>
+      <div class="col-4">
+        <label for="km-input" class="form-label">Km da percorrere</label>
+        <input type="number" class="form-control" id="km-input" />
+      </div>
+      <div class="col-4">
+        <label for="age-input" class="form-label">Fascia D'età</label>
+        <select id="age-input" class="form-select">
+          <option selected>Maggiorenne</option>
+          <option>Minorenne</option>
+          <option>Over 65</option>
+        </select>
+      </div>
+      <div class="col-6 text-end">
+        <button type="submit" class="btn btn-primary">Genera</button>
+      </div>
+      <div class="col-6 text-start">
+        <button type="submit" class="btn btn-primary">Annulla</button>
+      </div>
+    </form>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <!-- MIO JAVASCRIPT -->
-    <script src="main.js"></script>
   </body>
 </html>

@@ -1,12 +1,15 @@
 // Form elements
-const ageInput = document.getElementById("age-input");
+const nameInput = document.getElementById("name-input");
 const kmInput = document.getElementById("km-input");
+const ageInput = document.getElementById("age-input");
 const formInput = document.getElementById("form-input");
-const buttonInput = document.getElementById("button-input");
+// const buttonInput = document.getElementById("button-input");
 
-// Button trigger
-buttonInput.addEventListener("click", function () {
+// Form trigger
+formInput.addEventListener("submit", function (event) {
+  event.defaultPrevented();
   // Get value from input
+  const nameSurname = nameInput.value;
   const age = ageInput.value;
   const km = kmInput.value;
 
@@ -18,6 +21,7 @@ buttonInput.addEventListener("click", function () {
   const seniorDiscount = ticketPrice - discount40;
 
   // Check values
+  console.log("Nome e Cognome:", nameSurname);
   console.log("km:", km);
   console.log("age:", age);
   // console.log("ticket price", ticketPrice);
