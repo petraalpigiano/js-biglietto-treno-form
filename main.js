@@ -33,4 +33,4 @@ if (!isNaN(age) && !isNaN(km)) {
   outputPrice = "Inserisci solo numeri!";
 }
 // OUTPUT
-alert(outputPrice);
+console.log(outputPrice);
