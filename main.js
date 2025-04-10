@@ -6,6 +6,7 @@ const buttonInput = document.getElementById("button-input");
 
 // Button trigger
 buttonInput.addEventListener("click", function () {
+  let outputPrice;
   // Get value from input
   const age = ageInput.value;
   const km = kmInput.value;
@@ -20,30 +21,19 @@ buttonInput.addEventListener("click", function () {
   // Check values
   console.log("km", km);
   console.log("age", age);
-  console.log("ticket price", ticketPrice);
-  console.log("ticket for underage", underageDiscount);
-  console.log("ticket for senior", seniorDiscount);
+  // console.log("ticket price", ticketPrice);
+  // console.log("ticket for underage", underageDiscount);
+  // console.log("ticket for senior", seniorDiscount);
+
+  // Verifica se i dati inseriti sono corretti
+  if (age < 18) {
+    console.log("con sconto del 20%", underageDiscount);
+    outputPrice = "$" + underageDiscount.toFixed(2);
+  } else if (age > 65) {
+    console.log("con sconto del 40%", seniorDiscount);
+    outputPrice = "$" + seniorDiscount.toFixed(2);
+  } else {
+    console.log("ticket prize", ticketPrice);
+    outputPrice = "$" + ticketPrice.toFixed(2);
+  }
 });
-
-// let outputPrice;
-
-// // SVOLGIMENTO
-
-// // Verifica se i dati inseriti sono corretti
-// if (!isNaN(age) && !isNaN(km)) {
-//   if (age < 18) {
-//     console.log("con sconto del 20%", underageDiscount);
-//     outputPrice = "$" + underageDiscount.toFixed(2);
-//   } else if (age > 65) {
-//     console.log("con sconto del 40%", seniorDiscount);
-//     outputPrice = "$" + seniorDiscount.toFixed(2);
-//   } else {
-//     console.log("ticket prize", ticketPrice);
-//     outputPrice = "$" + ticketPrice.toFixed(2);
-//   }
-//   // Se non sono corretti
-// } else {
-//   outputPrice = "Inserisci solo numeri!";
-// }
-// // OUTPUT
-// console.log(outputPrice);
