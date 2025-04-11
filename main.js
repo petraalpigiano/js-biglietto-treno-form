@@ -2,12 +2,13 @@
 const nameInput = document.getElementById("name-input");
 const kmInput = document.getElementById("km-input");
 const ageInput = document.getElementById("age-input");
-// const formInput = document.getElementById("form-input");
-const buttonInput = document.getElementById("button-input");
-const buttonReset = document.getElementById("button-reset");
+const formInput = document.getElementById("form-input");
+// const buttonInput = document.getElementById("button-input");
+// const buttonReset = document.getElementById("button-reset");
 
 // Form trigger
-buttonInput.addEventListener("click", function () {
+formInput.addEventListener("submit", function (event) {
+  event.preventDefault();
   // Get value from input
   const nameSurname = nameInput.value;
   const age = ageInput.value;
